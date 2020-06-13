@@ -12,10 +12,19 @@ namespace GrocGet.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        [Route("GetProduct/{id}")]
         [HttpGet]
-        public ActionResult<Product> Get()
+        public ActionResult<Product> GetProduct(int id)
         {
-            return new Product() { Id = 1, Name = "Vegetabl Oil", ProdCatId = 1, Price = 203.50 };
+            return new Product() { Id = 1, Name = "Vegetable Oil", ProdCatId = 1, Price = 203.50 };
+        }
+
+        [Route("GetProducts")]
+        [HttpGet]
+        public ActionResult<List<Product>> GetProducts()
+        {
+            return new List<Product>() { new Product() { Id = 1, Name = "Vegetable Oil", ProdCatId = 1, Price = 203.50 },
+            new Product() { Id = 2, Name = "Coconut Oil", ProdCatId = 1, Price = 103.70 }};
         }
     }
         
