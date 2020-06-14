@@ -2,12 +2,18 @@ export class product {
     id: number;
     name: string;
     price: number;
+    prodCatId: number;
 }
 
 export class cart {
     id: number;
-    product: product;
+    productList: product[];
     user: user;
+}
+
+export class ProdCategory {
+    id: number;
+    name: string;
 }
 
 export class user {

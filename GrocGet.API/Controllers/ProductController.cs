@@ -26,7 +26,13 @@ namespace GrocGet.API.Controllers
             return new List<Product>() { new Product() { Id = 1, Name = "Vegetable Oil", ProdCatId = 1, Price = 203.50 },
             new Product() { Id = 2, Name = "Coconut Oil", ProdCatId = 1, Price = 103.70 }};
         }
-    }
-        
 
+        [Route("GetProductCategories")]
+        [HttpGet]
+        public ActionResult<List<ProductCategory>> GetProductCategories()
+        {
+            return new List<ProductCategory>() { new ProductCategory() { Id = 1, Name = "Oil & Ghee" },
+            new ProductCategory() { Id = 2, Name = "Pulses" }};
+        }
+    }
 }

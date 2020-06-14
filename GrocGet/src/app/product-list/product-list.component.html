@@ -1,3 +1,9 @@
-<p>
- <app-product></app-product>
-</p>
+ <div *ngFor="let prod of productList" class="container" style="margin-top: 70px;">
+    <div>
+        <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+        <h1>{{prod.name}}</h1>
+        <p class="price">${{prod.price}}</p>
+        <p>Some text about the jeans..</p>
+        <p><button>Add to Cart</button></p>
+      </div> 
+ </div>

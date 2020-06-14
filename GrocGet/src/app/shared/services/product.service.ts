@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { product } from 'src/app/shared/model/models';
+import { product, ProdCategory } from 'src/app/shared/model/models';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -23,5 +23,9 @@ export class ProductService {
 
     getProductList(): Observable<product[]> {
         return this.http.get<product[]>(this.base_url + 'product/GetProducts');
+    }
+
+    getProductCategories(): Observable<ProdCategory[]> {
+        return this.http.get<ProdCategory[]>(this.base_url + 'product/GetProductCategories')
     }
 }
