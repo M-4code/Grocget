@@ -29,4 +29,7 @@ export class ProductListComponent implements OnInit {
     )
   }
 
+  handleProductClick(data) {
+    console.log(data);
+  }
 }
